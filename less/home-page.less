@@ -1,7 +1,9 @@
 // Home Content
 
 .home {
-
+  @media @mobile {
+    background-color: red;
+  }
   .intro {
     img {
       border-radius: 5px;
@@ -60,6 +62,7 @@
       }
 
       .btn {
+        .btnmixin(#22283A; 2em);
       }
     }
 
@@ -74,4 +77,4 @@
       }
     }
   }
-}// home
+} // home
