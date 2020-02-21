@@ -160,6 +160,31 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+#navigation {
+  background-color: #F6F6F6;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 2px solid #F1F1F1;
+  align-items: center;
+}
+#navigation h1 {
+  font-size: 4rem;
+  color: #454A59;
+}
+#navigation nav {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+#navigation nav a {
+  font-size: 1.8rem;
+  color: #454A59;
+  text-decoration: none;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -169,6 +194,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home .intro img {
+  border-radius: 5px;
 }
 .home .intro h2 {
   padding: 15px;
