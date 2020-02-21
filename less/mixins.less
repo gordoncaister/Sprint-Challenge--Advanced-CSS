@@ -1,1 +1,29 @@
 // Mixins Here
+
+.flex(){
+    display: flex;
+}
+
+.navfont(){
+    color: @river-bend;
+}
+
+.btnmixin(@color, @fontsize){
+    background-color: @color;
+    font-size: @fontsize;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+    &:hover{
+        color: @color;
+        background-color: white;
+    }
+    @media @mobile {
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+    }
+}

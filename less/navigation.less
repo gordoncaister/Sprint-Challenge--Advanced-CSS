@@ -1,1 +1,43 @@
 // Navigation code here
+#navigation {
+
+    @keyframes anchor-animation {
+        50%{
+            font-size: 3em;
+        }
+    }
+
+    position: fixed;
+    top: 0;
+    background-color: @wild-sand;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    .flex();
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 2px solid @sea-shell;;
+    align-items: center;
+    
+    h1 {
+        font-size: 4rem;
+        .navfont();
+    }
+    nav {
+        .flex();
+        justify-content: space-between;
+        width: 25%;
+        @media @mobile {
+            width: 75%;
+        }
+        a {
+            font-size: 1.8rem;
+            .navfont();
+            text-decoration: none;
+            &:hover{
+                animation: anchor-animation 3s;
+            }
+        }
+    }
+    
+}
