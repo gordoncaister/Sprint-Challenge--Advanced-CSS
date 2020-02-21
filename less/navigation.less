@@ -1,6 +1,14 @@
 // Navigation code here
 #navigation {
 
+    @keyframes anchor-animation {
+        50%{
+            font-size: 3em;
+        }
+    }
+
+    position: fixed;
+    top: 0;
     background-color: @wild-sand;
     width: 100%;
     text-align: center;
@@ -26,6 +34,9 @@
             font-size: 1.8rem;
             .navfont();
             text-decoration: none;
+            &:hover{
+                animation: anchor-animation 3s;
+            }
         }
     }
     

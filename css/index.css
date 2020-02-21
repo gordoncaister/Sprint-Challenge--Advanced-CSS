@@ -161,7 +161,9 @@ p {
   margin: 0 auto;
 }
 #navigation {
-  background-color: #F6F6F6;
+  position: fixed;
+  top: 0;
+  background-color: rgba(246, 246, 246, 0.93333333);
   width: 100%;
   text-align: center;
   height: 100px;
@@ -170,6 +172,11 @@ p {
   justify-content: space-around;
   border-bottom: 2px solid #F1F1F1;
   align-items: center;
+}
+@keyframes anchor-animation {
+  50% {
+    font-size: 3em;
+  }
 }
 #navigation h1 {
   font-size: 4rem;
@@ -190,6 +197,9 @@ p {
   color: #454A59;
   text-decoration: none;
 }
+#navigation nav a:hover {
+  animation: anchor-animation 3s;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -201,6 +211,7 @@ footer {
   align-items: center;
 }
 .home .intro img {
+  margin-top: 100px;
   border-radius: 5px;
 }
 @media (max-width: 500px) {
@@ -315,4 +326,51 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+/* Add a background color and some padding around the form */
+.contactcontainer {
+  margin-top: 100px;
+  border-radius: 5px;
+  background-color: #F6F7F8;
+  padding: 20px;
+}
+.contactcontainer input[type=text],
+.contactcontainer select,
+.contactcontainer textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */;
+}
+.contactcontainer .btn {
+  background-color: #22283A;
+  font-size: 2em;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  width: 100px;
+}
+.contactcontainer .btn:hover {
+  color: #22283A;
+  background-color: white;
+}
+@media (max-width: 500px) {
+  .contactcontainer .btn {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+  }
 }
